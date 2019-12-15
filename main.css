@@ -42,14 +42,33 @@ body{
 .loader span:first-child::before,.loader span:last-child::before{
     background-color: silver;
 }
+.loader span:nth-child(n)::before
+{
+    animation: moving 0.75s infinite alternate;
 
+}
 .loader span:first-child {
-    animation: moving-up 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;
+    animation: moving-up 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;
     --direction: 1;
 }
 .loader span:last-child {
-    animation: moving-up 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate-reverse;
+    animation: moving-up 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate-reverse;
     --direction: -1;
+}
+
+@keyframes moving {
+    0%{
+        background-color: red;
+    }
+    50%{
+        /* transform: rotate(0deg); */
+        background-color: red;
+    }
+ 
+    100%{
+        background-color: white;
+        /* transform: rotate(calc(45deg * var(--direction))); */
+    }
 }
 @keyframes moving-up {
     0%{
