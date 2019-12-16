@@ -7,6 +7,56 @@ body{
     display: flex;
     justify-content: center;
 }
+.taiji {
+    left: 50px;
+    top:  50px;
+    /* background-color: black, white; */
+    background:  linear-gradient(to bottom, black 50%,white 50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    margin: 0px;
+    animation: TurnUp 1s infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    
+
+}
+.taiji::before,
+.taiji::after{
+    content: '';
+    display: block;
+    position: relative;
+    background-color:white;
+    /* top: 100px; */
+    /* left: 100px; */
+    top: 75px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border-width: 38px;
+    border-color: black;
+    border-style: solid;
+
+}
+.taiji::after{
+    content: '';
+    display: block;
+    position: relative;
+    background-color: rgb(27, 26, 26);
+    /* top: 100px; */
+    /* left: 100px; */
+    top: 75px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border-width: 38px;
+    border-color: white;
+    border-style: solid;
+
+}
 .loader {
     position: absolute;
     display: flex;
@@ -84,5 +134,14 @@ body{
     100%{
         background-color: white;
         transform: rotate(calc(45deg * var(--direction)));
+    }
+}
+@keyframes TurnUp {
+    0%{
+        transform: rotate(0deg);
+        
+    } 
+    100%{
+        transform: rotate(360deg);
     }
 }
