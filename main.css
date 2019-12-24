@@ -18,10 +18,9 @@ body{
     display: flex;
     position: absolute;
     margin: 0px;
-    animation: TurnUp 1s infinite;
+    animation: TurnUp 3s infinite;
     animation-delay: 0s;
-    animation-timing-function: linear;
-    
+    animation-timing-function: linear;  
 
 }
 .taiji::before,
