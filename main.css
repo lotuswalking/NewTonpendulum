@@ -8,9 +8,8 @@ body{
     justify-content: center;
 }
 .taiji {
-   position: absolute;
-    display: flex;
-    align-items: center;
+    left: 50px;
+    top:  50px;
     /* background-color: black, white; */
     background:  linear-gradient(to bottom, black 50%,white 50%);
     width: 300px;
